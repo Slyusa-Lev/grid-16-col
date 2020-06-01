@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 100%/1.5em Arial, Helvetica, sans-serif;
+  color: #000;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ddd;
+  padding-top: 20px;
+}
+
+.container .cols {
+  float: left;
+  margin: 0 0 1em;
+  padding: 0 1em;
+  background-color: #fd4; /*для наглядности сетки*/
+  border: 1px dotted green; /*для наглядности сетки*/
+  min-height: 200px; /*для наглядности сетки*/
+}
+
+.container .cols.col-1 {width: 6.25%;}
+.container .cols.col-2 {width: 12.5%;}
+.container .cols.col-3 {width: 18.75%;}
+.container .cols.col-4 {width: 25%;}
+.container .cols.col-5 {width: 31.25%;}
+.container .cols.col-6 {width: 37.5%;}
+.container .cols.col-7 {width: 43.75%;}
+.container .cols.col-8 {width: 50%;}
+.container .cols.col-9 {width: 56.25%;}
+.container .cols.col-10 {width: 62.5%;}
+.container .cols.col-11 {width: 68.75%;}
+.container .cols.col-12 {width: 75%;}
+.container .cols.col-13 {width: 81.25%;}
+.container .cols.col-14 {width: 87.5%;}
+.container .cols.col-15 {width: 93.75%;}
+.container .cols.col-16 {width: 100%;}
+
+.container::before,
+.container::after,
+.row::before,
+.row::after,
+.clear::before,
+.clear::after {
+  content: " ";
+  display: table;
+}
+
+.container::after,
+.row::after,
+.clear::after {
+  clear: both;
+}
+
+@media screen and (max-width: 320px) {
+	.container .cols.col-1,
+	.container .cols.col-2,
+	.container .cols.col-3,
+	.container .cols.col-4,
+	.container .cols.col-5,
+	.container .cols.col-6,
+	.container .cols.col-7,
+	.container .cols.col-8,
+	.container .cols.col-9,
+	.container .cols.col-10,
+	.container .cols.col-11,
+	.container .cols.col-12,
+	.container .cols.col-13,
+	.container .cols.col-14,
+	.container .cols.col-15,
+	.container .cols.col-16 {width: 100%;}
+}
